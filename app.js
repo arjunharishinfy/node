@@ -5,6 +5,6 @@ app.get('/', function(rq, rs) {
   rs.send("Server Working");
 })'
 
-app.listen(process.env.PORT || 3000);
-module.exports = app;
-
+const port = 3000;
+app.listen(port)
+console.log(`Listening at http://localhost:${port}`)

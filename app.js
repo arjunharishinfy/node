@@ -10,6 +10,9 @@ app.use(bodyParser.urlencoded());
 
 app.use(bodyParser.json());
 
+app.get('/', function(rq, rs) {
+  rs.send("Server Working");
+})
 app.post('/export-excel', function(rq, rs) {
   //console.log(request.body);
   rs.writeHead(200, {'Content-Type': 'application/json'});
